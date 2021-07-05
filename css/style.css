@@ -12,14 +12,19 @@ body {
   color: #4c6986;
 }
 
+.title {
+  max-width: 500px;
+}
+
 .wrapper {
   max-width: 1200px;
   max-height: 600px;
   height: 800px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0 auto;
+  padding: 40px;
 }
 
 h1 {
@@ -57,20 +62,31 @@ h1 {
   display: flex;
   color: #9a9a9a;
   font-size: 24px;
+  padding-bottom: 8px;
 }
 
 .header .player-x {
   flex: 1;
   border-bottom: 5px solid #eee;
-  padding-bottom: 8px;
+  padding-bottom: 10px;
   text-align: center;
+}
+
+.player-x.active {
+  color: #42bed7;
+  border-color: #42bed7;
 }
 
 .header .player-o {
   flex: 1;
   border-bottom: 5px solid #eee;
-  padding-bottom: 8px;
+  padding-bottom: 10px;
   text-align: center;
+}
+
+.player-o.active {
+  color: #d7bafb;
+  border-color: #d7bafb;
 }
 
 .board {
@@ -103,4 +119,25 @@ h1 {
 
 .board-tile:hover {
   background-color: #eee;
+}
+
+.tile-x {
+  color: #42bed7;
+}
+
+.tile-o {
+  color: #d7bafb;
+}
+
+.tile-winner span {
+  color: #23ce6b;
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .left {
+    margin-bottom: 50px;
+  }
 }
