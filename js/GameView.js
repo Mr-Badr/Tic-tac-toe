@@ -13,10 +13,10 @@ export default class GameView {
       tile.innerHTML = `<span class="${tileType}">${
         game.board[i] ? game.board[i] : ""
       }</span>`;
-    }
 
-    if (winningCombination && winningCombination.includes(i)) {
-      tile.classList.add("tile-winner");
+      if (winningCombination && winningCombination.includes(i)) {
+        tile.classList.add("tile-winner");
+      }
     }
   }
 
